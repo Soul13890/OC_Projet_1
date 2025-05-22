@@ -1,6 +1,6 @@
 /****** General ***********/
 * {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif; 
 }
 
 :root {
@@ -16,6 +16,7 @@
 body {
     display: flex;
     justify-content: center;
+    margin-top: 0px;
 }
 
 .main-container {
@@ -56,6 +57,75 @@ a {
 
 .neutral-star {
     color: var(--main-bg-color)
+}
+
+/****** Header and Navbar ***********/
+header{    
+    display: grid;
+    grid-template-columns: 78% 22%;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "logo booki"
+        "ul nav";
+    margin: 0px;
+    padding: 0px;
+}
+
+header img{
+    grid-area: logo booki;
+    cursor: pointer;
+    width: 61.09px;
+    height: 19px;
+    margin: 30px;
+    margin-left: 0px;
+}
+
+nav{
+    grid-area: ul nav;   
+    width: 294px;
+    height: 35px;
+    padding: 0px 25px;       
+}
+
+nav ul{
+    display: flex;
+    justify-items: space-between; 
+    margin: 0px;
+    padding: 0px 25px;
+    gap: 68px;
+}
+
+nav ul li{
+    list-style: none;
+    cursor: pointer;
+    position: relative;
+    width: 113px;
+    height: 35px;    
+    padding-top: 16px;
+    font-weight: 400;
+}
+
+nav ul li:first-child{
+        
+    color: #0065FC;
+}
+
+nav ul li:first-child:before{
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background: #0065FC;
+    transform: translateY(-16px);
+}
+
+nav li:hover:before {
+  content: "";    
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background: #0065FC;
+    transform: translateY(-16px);
 }
 
 /****** Hebergements And Populaires ***********/
