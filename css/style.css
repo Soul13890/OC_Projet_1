@@ -16,7 +16,7 @@
 body {
     display: flex;
     justify-content: center;
-    margin-top: 0px;    
+    margin-top: 0px;        
 }
 
 .main-container {
@@ -24,6 +24,12 @@ body {
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
 }
 
 a {
@@ -131,13 +137,14 @@ nav li:hover:before {
 /****** Title And Search ***********/
 
 .title-and-search{
-    margin: 35px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
 }
 
 .title{
     display: flex;
-    flex-direction: column;
-    margin: 35px 0px;
+    flex-direction: column;    
     gap: 8px;
 }
 
@@ -151,10 +158,6 @@ nav li:hover:before {
     font-weight: 400;
     font-size: 16px;
     margin: 0;
-}
-
-.search-bar{
-    margin: 35px 0px;
 }
 
 .search-bar ul{
@@ -222,8 +225,7 @@ nav li:hover:before {
 .filters{
     display: flex;
     align-items: center; 
-    gap: 15px;
-    margin: 35px 0px;
+    gap: 15px;    
 }
 
 .filters h3{
@@ -261,8 +263,7 @@ nav li:hover:before {
     display: flex;
     align-items: center;
     height: 24px;
-    gap: 10px;
-    margin: 35px 0px;
+    gap: 10px;    
 }
 
 .icon-container{
@@ -287,8 +288,7 @@ nav li:hover:before {
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
-    justify-content: space-between;
-    margin: 35px 0px;
+    justify-content: space-between;    
 }
 
 .hebergements-and-populaires section {
