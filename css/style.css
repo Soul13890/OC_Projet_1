@@ -15,15 +15,20 @@
 
 body {
     display: flex;
-    justify-content: center;
-    margin-top: 0px;        
+    flex-direction: column;
+    justify-content: center;    
+    margin-top: 0px;
+    margin-bottom: 0px;      
 }
 
 .main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
     width: 100%;
     max-width: 1440px;
     padding: 0 50px;
-    box-sizing: border-box;
+    box-sizing: border-box;    
 }
 
 main {
@@ -67,35 +72,28 @@ a {
 
 /****** Header and Navbar ***********/
 header{    
-    display: grid;
-    grid-template-columns: 78% 22%;
-    grid-template-rows: 1fr;
-    grid-template-areas:
-        "logo booki"
-        "ul nav";
-    margin: 0px;
-    padding: 0px;
+    width: 100%;
+    max-width: 1440px;
+    height: 79px;
+    display: flex;
+    justify-content: space-between;    
 }
 
-header img{
-    grid-area: logo booki;
+.logo-container{
+    padding: 30px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img{    
     cursor: pointer;
     width: 61.09px;
-    height: 19px;
-    margin: 30px;
-    margin-left: 0px;
-}
-
-nav{
-    grid-area: ul nav;   
-    width: 294px;
-    height: 35px;
-    padding: 0px 25px;       
+    height: 19px;   
 }
 
 nav ul{
-    display: flex;
-    justify-items: space-between; 
+    display: flex;      
     margin: 0px;
     padding: 0px 25px;
     gap: 68px;
@@ -104,11 +102,12 @@ nav ul{
 nav ul li{
     list-style: none;
     cursor: pointer;
-    position: relative;
+    position: relative;    
     width: 113px;
     height: 35px;    
     padding-top: 16px;
     font-weight: 400;
+    text-align: center;      
 }
 
 nav ul li:first-child{
@@ -118,7 +117,7 @@ nav ul li:first-child{
 
 nav ul li:first-child:before{
     content: "";
-    width: 100%;
+    width: 113px;
     height: 3px;
     position: absolute;
     background: #0065FC;
@@ -127,11 +126,11 @@ nav ul li:first-child:before{
 
 nav li:hover:before {
     content: "";    
-    width: 100%;
+    width: 113px;
     height: 3px;
     position: absolute;
     background: #0065FC;
-    transform: translateY(-16px);
+    transform: translate(-25px,-16px);             
 }
 
 /****** Title And Search ***********/
@@ -462,6 +461,33 @@ nav li:hover:before {
     margin: 0;
     font-weight: 700;
     font-size: 16px;    
+}
+
+/****** Footer ***********/
+
+footer{
+    background-color: #F2F2F2;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 1fr;
+}
+
+.footer-container{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-container h3{
+    margin: 0px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.footer-container a{
+    font-weight: 400;
+    font-size: 16px;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
