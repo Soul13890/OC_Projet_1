@@ -14,9 +14,10 @@
 }
 
 body {
-    display: flex;
+    display: flex;    
     flex-direction: column;
-    justify-content: center;    
+    justify-content: center;
+    align-items: center;
     margin-top: 0px;
     margin-bottom: 0px;      
 }
@@ -28,6 +29,7 @@ body {
     width: 100%;
     max-width: 1440px;
     padding: 0 50px;
+    margin: 0 50px;
     box-sizing: border-box;    
 }
 
@@ -312,35 +314,40 @@ nav li:hover:before {
 }
 
 .hebergements-cards-row{
-    display: flex;
+    display: flex;    
     justify-content: space-between;
-    gap: 30px;
 }
 
-.hebergements-cards{   
-    display: flex;
-    border-radius: 20px; 
+.hebergements-cards{
+    width: 30%;
+    border-radius: 20px;
 }
 
 .hebergements-cards .card{
     padding: 0px;
-    width: 243px;
     box-shadow: 0px 3px rgba(0, 0, 0, 0.1);
 }
 
-.hebergements-cards img{   
-    width: 96%;
+.hebergements-cards .card-img{
+    width: 100%;    
+    display: flex;
+}
+
+.hebergements-cards img{
+    min-width: 145px;     
+    max-width: 250.33px;  
+    width: 100%;
     height: 124px;
-    border: 5px solid white;
+    border: 5px solid white;  
     border-radius: 20px 20px 0 0;
+    justify-content: center;    
 }
 
 .hebergements-cards .card-content{     
-    padding:  0px 15px; 
+    padding:  0px 15px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;   
-    box-sizing: border-box;
+    justify-content: space-between;        
     gap: 8px;
 }
 
