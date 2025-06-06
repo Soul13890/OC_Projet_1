@@ -604,18 +604,16 @@ footer div{
 
     /****** Activities ***********/
     .activities-cards .card{
-        max-height: 270px;              
+        height: auto;            
     }
 
-    .activities-cards img{        
-        min-height: 150px;
+    .activities-cards img{       
         height: 200px;
     }
 
-    .activities-cards .card-content{
-        max-height: 70px;        
+    .activities-cards .card-content{               
         height: auto;
-        align-items: center;                     
+        align-items: center;                  
     }
 }
 
