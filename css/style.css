@@ -1,6 +1,6 @@
 /****** General ***********/
 * {
-    font-family: 'Raleway', sans-serif; 
+    font-family: 'Raleway', sans-serif;    
 }
 
 :root {
@@ -19,8 +19,8 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 0px;
-    margin-bottom: 0px;
-    gap: 30px;     
+    margin-bottom: 0px;    
+    gap: 30px;    
 }
 
 .main-container {
@@ -31,7 +31,7 @@ body {
     max-width: 1440px;
     padding: 0 50px;
     margin: 0 50px;
-    box-sizing: border-box;    
+    box-sizing: border-box;   
 }
 
 main {
@@ -91,7 +91,7 @@ header{
 header img{    
     cursor: pointer;
     width: 61.09px;
-    height: 19px;   
+    height: 19px;
 }
 
 nav ul{
@@ -201,7 +201,7 @@ nav ul li:first-child{
     text-align: center;    
     font-weight: 700;
     font-size: 18px;
-    color: black;
+    color: black;  
 }
 
 .search-form input::placeholder{   
@@ -211,9 +211,9 @@ nav ul li:first-child{
     color: black;  
 }
 
-.search-button input{
+.search-button button:first-child{
     cursor: pointer;
-    width: 132px;
+    width: auto;
     height: 49px;
     border: 1px solid #0065FC;
     border-radius: 0px 15px 15px 0px;
@@ -221,7 +221,46 @@ nav ul li:first-child{
     background-color: #0065FC;
     font-weight: 700;
     font-size: 18px;    
-    text-align: center;    
+    text-align: center;
+    padding-top: auto;
+    padding-bottom: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.search-button button:last-child{
+    display: none;
+    cursor: pointer;
+    width: auto;
+    height: 49px;
+    border: 1px solid #0065FC;
+    border-radius: 15px;
+    color: white;
+    background-color: #0065FC;
+    font-weight: 700;
+    font-size: 18px;    
+    text-align: center;
+    padding-top: auto;
+    padding-bottom: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.search-button button i{    
+    color: white;    
+    font-weight: 700;
+    font-size: 18px;    
+    text-align: center;        
+}
+
+.search-button button:first-child{
+    align-items: center;
+    justify-content: center;
+}
+
+.search-button button:last-child{
+    align-items: center;
+    justify-content: center;    
 }
 
 /****** Filters ***********/
@@ -581,11 +620,13 @@ footer div{
 }
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
+@media (max-width: 767.98px) {   
+
+    /****** Body ***********/
     body{
         margin: 0;
     }
-    
+
     /****** Header + nav ***********/
     header{
         flex-direction: column;
@@ -605,25 +646,25 @@ footer div{
     }
 
     .nav-activities a:hover:before {
-        visibility: hidden;    
+        visibility: hidden;
     }
 
-    .nav-hebergements .under-bar:before{
-        content: "";
-        width: 60%;
-        height: 2px;
-        position: absolute;
-        background: #0065FC;
-        transform: translate(-50%,16px);
+    .grid-bar .under-bar1{        
+        width: 100%;
+        height: 2px;        
+        background-color: #0065FC;
     }
 
-    .nav-activities .under-bar:before{
-        content: "";
-        width: 60%;
-        height: 2px;
-        position: absolute;
-        background: #d9d9d9;
-        transform: translate(-38%,16px);
+    .grid-bar .under-bar2{        
+        width: 100%;
+        height: 2px;        
+        background-color: #F2F2F2;
+    }
+
+    .grid-bar{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr;        
     }
 
     .nav-activities a:hover{
@@ -635,26 +676,68 @@ footer div{
     .main-container{
         padding-left: 0px;
         padding-right: 0px;
-        margin: 0;        
+        margin: 1px;   
     }
 
-    /****** Title and search + Filters ***********/
-
+    /****** Title and search + Filters ***********/    
     .title-and-search{
         padding-left: 20px;
         padding-right: 20px;
     }
 
-    .filters-buttons{                
-        align-items : start;
-        gap: 20px;
+    .search-form form{
+        width: 100%;
+    }
+
+    .search-form form input{        
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .search-form form input::placeholder{        
+        width: 100%;
+        text-align: left;       
+    }
+
+    .search-bar ul{
+        margin: 0px auto;
+    }
+
+    .search-bar ul{  
+        width: 100%;      
+        display: grid;
+        grid-template-columns: 49px 1fr 49px;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "icon search submit";
+    }
+
+    .search-button button:first-child{
+        display: none;
+    }
+
+    .search-button button:last-child{
+        display: block;
+    }
+
+    .filters-title h3{
+        margin: 0;
+    }
+
+    .filters-buttons{
+        width: 100%;
+        gap: 10px;        
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr;
+        font-size: 14px;      
     }
 
     .filters button{
         justify-content: left;
+        min-width: 162.5px;
+        font-size: 14px;  
     }
 
     /****** Hebergements and populaires ***********/
