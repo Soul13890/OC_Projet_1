@@ -233,8 +233,7 @@ nav ul li a:hover{
 
 .filters button{
     font-weight: 700;
-    font-size: 18px;
-    
+    font-size: 17px;    
     display: flex;
     justify-content: center;   
     align-items: center;    
