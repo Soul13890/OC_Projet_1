@@ -139,7 +139,7 @@ nav ul li a:hover{
     gap: 8px;
 }
 
-.title h2{
+.title h1{
     font-weight: 700;
     font-size: 22px;
     margin: 0;
@@ -218,6 +218,11 @@ nav ul li a:hover{
     display: flex;
     align-items: center; 
     gap: 15px;    
+}
+
+.filters-title h2{
+    font-weight: 700;
+    font-size: 18px;
 }
 
 .filters-buttons{
