@@ -160,8 +160,8 @@ nav ul li a:hover{
 }
 
 .search-icon{    
-    width: 50px;
-    height: 49px;    
+    min-width: 50px;
+    height: 49px;   
     border-radius: 15px 0px 0px 15px;
     display: flex;
     justify-content: center;
